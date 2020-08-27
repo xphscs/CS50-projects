@@ -1,0 +1,29 @@
+I used the newest version of LOVE 2D and some of the functions in plush.lua were changed, so that's why there are 
+two plush files. I will let on default the one was used on the lecture, but also will make a copy of the plush that runs
+in the Version of Love I used (plush_newer_version.lua) just in case it's needed.
+
+
+My work:
+
+ For pause: 
+Created a Pause state. Had to change some code from PlayState.lua, CountDown.lua and main.lua. 
+What I did was to save the data from the PlayState on PauseState and render them, without updating, so
+it makes the impression of pause the game (adding that in PauseState the Ground and Background speed are
+turned to 0, so they don't move)
+
+ For random pipe generation:     
+Just made the values of timer in PlayState go random with the math.random function, and the same thing with the GAPs
+on PipePairs. The random value goes in the Update function to make it variate all over the game.
+
+ For medals: 
+Created a new class, were the Y position and the images (I made on photoshop) were added. On PlaySate the score was
+passed to the medal Class and with some conditionals the images and the messages are rendered. 
+
+For the bird's outline just created new bird's images with them, and in the bird function and the score value render
+the bird in the differents images according to conditionals.
+
+ For the limits:
+Just added a conditional on the Bird class where you can't jump when you're higher than y=0, and when you touch that
+point, it makes you go back one pixel. 
+
+Thanks. 
